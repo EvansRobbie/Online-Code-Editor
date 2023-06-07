@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 
 const PREFIX = 'online-code-editor' // this hels to identify your local storage since maybe you already have other things stored in local Storage
 const UseLocalStorage = (key:any, initialValue:any) => {

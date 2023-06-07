@@ -5,6 +5,6 @@
 @layer base {
   .codeMirror{
     position: absolute;
-    @apply w-full
+    @apply w-full absolute
   }
 }

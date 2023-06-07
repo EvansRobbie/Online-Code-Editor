@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react'
-import Output from './Output'
 import Editor from './Editor'
+import UseLocalStorage from '../customHook/UseLocalStorage'
 
 const Index = () => {
-    const [html, setHtml] = useState<string>('')
-    const [css, setCss] = useState<string>('')
-    const [javascript, setJavascript] = useState<string>('')
+    const [html, setHtml] = UseLocalStorage('html', '')
+    const [css, setCss] = UseLocalStorage('css', '')
+    const [javascript, setJavascript] = UseLocalStorage('javascript', '')
     const [srcDoc, setSrcDoc] = useState('')
  useEffect (() =>{
     const timeOut = setTimeout(() =>{
@@ -26,13 +26,13 @@ const Index = () => {
         <div className='flex  bg-black h-[60vh] py-4'>
         <div className='border flex flex-grow gap-4 border-gray-500'>
             <Editor displayName='HTML' languageName='xml' onChange={setHtml}  value={html}/>
-            <Editor displayName='CSS' languageName='CSS' onChange={setCss}  value={css}/>
-            <Editor displayName='JS' languageName='JS' onChange={setJavascript}  value={javascript}/>
-
+            <Editor displayName='CSS' languageName='css' onChange={setCss}  value={css}/>
+            <Editor displayName='JS' languageName='javascript' onChange={setJavascript}  value={javascript}/>
+         
         </div>
     </div>
         {/* Output display */}
-        <div className=''>
+        <div className='overflow-hidden'>
         <iframe srcDoc={srcDoc} title='output'
                 sandbox='allow-scripts'
                 height={100}

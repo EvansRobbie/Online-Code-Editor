@@ -4,6 +4,7 @@ import 'codemirror/theme/material.css';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
+
 import { Controlled as CodeMirror } from 'react-codemirror2';
 
 const Editor = ({displayName, languageName, value, onChange}:{displayName:string, languageName:string, onChange:React.SetStateAction<React.Dispatch<string>>, value:string}) => {
