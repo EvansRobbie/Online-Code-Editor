@@ -4,13 +4,17 @@ import 'codemirror/theme/material.css';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
-
 import { Controlled as CodeMirror } from 'react-codemirror2';
 
 const Editor = ({displayName, languageName, value, onChange}:{displayName:string, languageName:string, onChange:React.SetStateAction<React.Dispatch<string>>, value:string}) => {
     const [isOpen, setIsopen] = useState(true)
     const handleChange = (editor:any, data:any, value:any) =>{
         onChange(value)
+         // eslint-disable-next-line no-unused-vars
+        const unusedData = data; // This variable is not used
+        const unusedEditor = editor; // This variable is not used
+        unusedData
+        unusedEditor
     } 
     // console.log(isOpen)
   return (

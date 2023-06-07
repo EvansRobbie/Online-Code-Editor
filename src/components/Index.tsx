@@ -32,11 +32,11 @@ const Index = () => {
         </div>
     </div>
         {/* Output display */}
-        <div className='overflow-hidden'>
+        <div className='h-[40vh]'>
         <iframe srcDoc={srcDoc} title='output'
                 sandbox='allow-scripts'
-                height={100}
-                width={100}
+                height='100%'
+                width='100%'
                 />
         </div>
     </div>
