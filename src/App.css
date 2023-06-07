@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .codeMirror{
+    position: absolute;
+    @apply w-full
+  }
+}
