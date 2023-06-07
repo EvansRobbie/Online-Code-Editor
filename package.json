@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "codemirror": "^6.0.1",
+    "codemirror": "^5.62.2",
     "react": "^18.2.0",
     "react-codemirror2": "^7.2.1",
     "react-dom": "^18.2.0"
